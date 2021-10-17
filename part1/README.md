@@ -35,24 +35,24 @@ The commands used to get the message were (the third one is run once within the 
 ```
 $ docker run -d --name secret_message devopsdockeruh/simple-web-service:ubuntu
 $ docker exec -it secret_message bash
-$ tail -f ./text.log
+root@39366230955b:/usr/src/app# tail -f ./text.log
 ```
 
 ### 1.4. Missing dependencies
 
-The commands I used to execute the script are:
+The commands used to execute the script are:
 
 ```
-$ docker run -d -it --name missing_dependencies ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
-$ docker exec -it missing_dependencies sh -c 'apt update && apt upgrade && apt install curl'
-$ y
-$ docker attach missing_dependencies
-$ helsinki.fi
+$ docker run -it --name missing_dependencies ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 ```
 
-First we get the container running detached with an interactive tty. Then we run the commands necessary to install curl in it. We'll have to input a `y` during this to confirm the install.
+Then, from another terminal:
 
-Then, we attach the container to our terminal. Since we started it detached, we will not see the first line of the script printed, but it is waiting to read the input. We then input `helsinki.fi`, which fetches the specified html and finally the container stops.
+```
+$ docker exec missing_dependencies bash -c 'apt-get update && apt-get upgrade && apt-get install curl -y'
+```
+
+Finally, back to the original terminal, we can input `helsinki.fi` and get the exepected output.
 
 ### 1.5. Sizes of images
 
