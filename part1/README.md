@@ -77,9 +77,20 @@ FROM devopsdockeruh/simple-web-service:alpine
 CMD server
 ```
 
-From the directory that contains this Docker file, we run:
+From the directory that contains this Dockerfile, we run:
 
 ```
 $ docker build . -t web-server
 $ docker run web-server
 ```
+
+### 1.8. Image for script
+
+From the [directory](./image-for-script) that contains our [Dockerfile](./image-for-script/Dockerfile) and [script](./image-for-script/curl.sh), we run:
+
+```
+$ docker build . -t curler
+$ docker run curler
+```
+
+Then we can input `helsinki.fi` and the container works as expected.
