@@ -69,7 +69,7 @@ You found the correct password. Secret message is:
 
 ### 1.7. Two line Dockerfile
 
-The contents of the Dockerfile are:
+The contents of the Dockerfile are ([link](./two-line-dockerfile/Dockerfile) to the file in this repo):
 
 ```dockerfile
 FROM devopsdockeruh/simple-web-service:alpine
