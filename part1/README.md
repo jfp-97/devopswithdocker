@@ -94,3 +94,12 @@ $ docker run curler
 ```
 
 Then we can input `helsinki.fi` and the container works as expected.
+
+### 1.9. Volumes
+
+We can run these commands to have the logs in our filesyste:
+
+```
+$ mkdir volumes && touch volumes/text.log
+$ docker run -v "$(pwd)/volumes/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+```
