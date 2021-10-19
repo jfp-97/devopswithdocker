@@ -113,3 +113,7 @@ docker run -p 1234:8080 devopsdockeruh/simple-web-service server
 ```
 
 Then, from the browser, the expected output is seen when opening `http://localhost:1234/`
+
+### 1.11. Spring
+
+Here is the [Dockerfile](./spring/Dockerfile).
