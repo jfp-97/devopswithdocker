@@ -103,3 +103,13 @@ We can run these commands to have the logs in our filesyste:
 $ mkdir volumes && touch volumes/text.log
 $ docker run -v "$(pwd)/volumes/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
 ```
+
+### 1.10. Ports open
+
+To get the container up, we simply run:
+
+```
+docker run -p 1234:8080 devopsdockeruh/simple-web-service server
+```
+
+Then, from the browser, the expected output is seen when opening `http://localhost:1234/`
