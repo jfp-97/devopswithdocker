@@ -117,3 +117,25 @@ Then, from the browser, the expected output is seen when opening `http://localho
 ### 1.11. Spring
 
 Here is the [Dockerfile](./spring/Dockerfile).
+
+### 1.12 Hello, frontend!
+
+Here is the [Dockerfile](./hello-frontend/Dockerfile).
+
+To run on `localhost:5000`, run:
+
+```
+$ docker build . -t example-frontend
+$ docker run -p 5000:5000 example-frontend
+```
+
+### 1.12 Hello, backend!
+
+Here is the [Dockerfile](./hello-backend/Dockerfile).
+
+To run on `localhost:8080`, run:
+
+```
+$ docker build . -t example-backend
+$ docker run -p 8080:8080 example-backend
+```
