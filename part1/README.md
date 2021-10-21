@@ -126,10 +126,10 @@ To run on `localhost:5000`, run:
 
 ```
 $ docker build . -t example-frontend
-$ docker run -p 5000:5000 example-frontend
+$ docker run -it -p 5000:5000 example-frontend
 ```
 
-### 1.12 Hello, backend!
+### 1.13 Hello, backend!
 
 Here is the [Dockerfile](./hello-backend/Dockerfile).
 
@@ -137,5 +137,23 @@ To run on `localhost:8080`, run:
 
 ```
 $ docker build . -t example-backend
-$ docker run -p 8080:8080 example-backend
+$ docker run -it -p 8080:8080 example-backend
+```
+
+### 1.14 Environment
+
+Here are the modified Dockerfiles for [frontend](./environment/frontend/Dockerfile) and [backend](./environment/backend/Dockerfile).
+
+To run the frontend:
+
+```
+$ docker build . -t example-frontend
+$ docker run -it -p 5000:5000 example-frontend
+```
+
+To run the backend:
+
+```
+$ docker build . -t example-backend
+$ docker run -it -p 8080:8080 example-backend
 ```
